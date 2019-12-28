@@ -1,0 +1,109 @@
+@media screen and (max-width:640px) {
+    /* reglas CSS */
+    .video{
+        width: 100%;
+    }
+}
+@media screen and (max-width:1024px) and (min-width:640px) {
+    /* reglas CSS */
+    .video{
+        width: 80%;
+    }
+}
+@media screen and (min-width:1024px) {
+/* reglas CSS */
+.video{
+width: 50%;
+}
+}
+
+body{
+        font-family: Arial, Helvetica, sans-serif;
+}
+
+header h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.video_controls{
+    background-color: rgba(100, 100, 100, 0.5);
+}
+
+button{
+    padding: 0.8em;
+    margin: 0em;
+    border: none;
+    background-color: rgba(244, 128, 29, 0.5);
+    cursor: pointer;
+}
+
+progress{
+    width: 100%;
+    height: 0.5em;
+    color: rgba(244, 128, 29, 0.5);
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    cursor: pointer;
+}
+
+
+progress::-moz-progress-bar { background: rgba(244, 128, 29, 0.5); }
+progress::-webkit-progress-value { background: rgba(244, 128, 29, 0.5); }
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?6cy6l2');
+    src:  url('fonts/icomoon.eot?6cy6l2#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?6cy6l2') format('truetype'),
+        url('fonts/icomoon.woff?6cy6l2') format('woff'),
+        url('fonts/icomoon.svg?6cy6l2#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-play3:before {
+    content: "\ea1c";
+}
+.icon-pause2:before {
+    content: "\ea1d";
+}
+.icon-stop2:before {
+    content: "\ea1e";
+}
+.icon-backward2:before {
+    content: "\ea1f";
+}
+.icon-forward3:before {
+    content: "\ea20";
+}
+.icon-volume-medium:before {
+    content: "\ea27";
+}
+.icon-volume-mute2:before {
+    content: "\ea2a";
+}
+.icon-volume-increase:before {
+    content: "\ea2b";
+}
+.icon-volume-decrease:before {
+    content: "\ea2c";
+}
+.icon-enlarge:before {
+    content: "\e989";
+}

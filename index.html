@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <h1>Controlador de video personalizado</h1>
+    </header>
+    <nav></nav>
+    <article class="video" id="reproductor">
+        <video src="assets/video/clase_gime.mp4" style="width: 100%;" id="video"></video>
+        <nav class="video_controls">
+            <button id="play">
+                <span class="icon-play3"></span>
+            </button>
+            <button id="stop">
+                <span class="icon-stop2"></span>
+            </button>
+            <button id="back">
+                <span class="icon-backward2"></span>
+            </button>
+            <button id="forward">
+                <span class="icon-forward3"></span>
+            </button>
+            <button id="mute">
+                <span class="icon-volume-medium"></span>
+            </button>
+            Tiempo <span id="tiempo">00:00</span>
+            Sonido <span id="sonido">ON</span>
+            <button id="fullscreen" style="float:right">
+                <span class="icon-enlarge"></span>
+            </button>
+        </nav>
+        <progress max="100" value="0" id="progressBar"></progress>
+    </article>
+    <footer></footer>
+</body>
+</html>
