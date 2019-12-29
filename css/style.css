@@ -12,9 +12,18 @@
 }
 @media screen and (min-width:1024px) {
 /* reglas CSS */
-.video{
-width: 50%;
+    .video{
+        width: 50%;
+    }
 }
+
+.video{
+    margin: auto;
+}
+
+.titulo{
+    margin: auto;
+    text-align: center;
 }
 
 body{
