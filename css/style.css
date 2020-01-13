@@ -139,6 +139,12 @@ textarea{
     border-radius: 1em;
 }
 
+.elemento:hover{
+    background-color: rgba(244, 128, 29, 0.8);
+    color: rgba(0, 0, 0, 0.95);
+    cursor: pointer;
+}
+
 .elemento-texto{
     width: auto;
     padding: 10px;
