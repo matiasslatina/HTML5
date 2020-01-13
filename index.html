@@ -1,18 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Matias Latina</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" type="module"></script>
 </head>
 <body>
-    <header class="titulo">
-        <h1>Controlador de video personalizado</h1>
-    </header>
+    
+    <header  class="titulo">
+
+        <p id="textoLogo">Implementando HTML5, CSS3 y JS avanzado</p>
+        
+        <div id="logoContainer" style="display: flex;">
+            <img src="assets/img/programador.png" alt="" id="logo" >
+            
+        </div>
+        
+
+		<div class="menu_bar">
+			<a href="#" class="bt-menu"><span class="icon-list2"></span>Menu</a>
+		</div>
+		<nav class="menu-simple">
+			<ul>
+				<li><a href="#top">Inicio</a></li>
+				<li><a href="#reproductor">Reproductor</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#flexbox">Flexbox</a></li>
+			</ul>
+		</nav>
+	</header>
+
     <section class="video" id="reproductor">
+        <h1>Controlador de video personalizado</h1>
+
         <video src="assets/video/clase_gime.mp4" style="width: 100%;" id="video"></video>
         <nav class="video_controls">
             <button id="play">
@@ -31,13 +54,89 @@
                 <span class="icon-volume-medium"></span>
             </button>
             <span id="tiempo">00:00</span>
-            <span id="sonido"> Sonido  ON</span>
+            <span id="sonido">Sonido  ON</span>
             <button id="fullscreen" style="float:right">
                 <span class="icon-enlarge"></span>
             </button>
         </nav>
         <progress max="100" value="0" id="progressBar"></progress>
     </section>
+
+    <section id="contacto">
+        <h1>Formulario de contacto</h1>
+        <form action="index.html" method="post" id="contactForm">
+            <input type="text" name="" id="nombre" placeholder="Nombre" required>
+            <input type="email" name="" id="correo" placeholder="Correo" required>
+            <textarea name="" id="asunto" cols="30" rows="10" placeholder="Asunto" required></textarea>
+            <input type="submit" value="Enviar" class="button" id="btnSubmit">
+        </form>
+    </section>
+
+    
+    <section class="contenedor" id="flexbox">
+        <h1 style="width: 100%;">Contenido maquetado con Flexbox</h1>
+        <article class="elemento">
+            <figure>
+                <img src="http://assets.climatecentral.org/images/made/3_16_16_upton_paris_720_405_s_c1_c_c.jpg" >
+                <figcaption>Fig.1 - París de noche (Francia)</figcaption>
+            </figure>
+            <div class="elemento-texto">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type.
+            </div>
+        </article>
+        <article class="elemento">
+            <figure>
+                <img src="https://cdn.ticbeat.com/src/uploads/2017/03/hamburgo.jpg" >
+                <figcaption>Fig.2 - Hamburg (Alemania)</figcaption>
+            </figure>
+            <div class="elemento-texto">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </div>
+        </article>
+        <article class="elemento">
+            <figure>
+                <img src="https://cdn.ticbeat.com/src/uploads/2017/08/mejores-ciudades-del-mundo.png" >
+                <figcaption>Fig.3 - Auckland (Nueva Zelanda) </figcaption>
+            </figure>
+            <div class="elemento-texto">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+        </article>
+        <article class="elemento">
+            <figure>
+                <img src="https://cdn.ticbeat.com/src/uploads/2017/08/mejores-ciudades-del-mundo-3.jpg" >
+                <figcaption>Fig.4 - Perth (Australia)</figcaption>
+            </figure>
+            <div class="elemento-texto">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type.
+            </div>
+        </article>
+        <article class="elemento">
+            <figure>
+                <img src="https://cdn.ticbeat.com/src/uploads/2017/08/mejores-ciudades-del-mundo-2.jpg" >
+                <figcaption>Fig.5 - Adelaida (Canadá)</figcaption>
+            </figure>
+            <div class="elemento-texto">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </div>
+        </article>
+        <article class="elemento">
+            <figure>
+                <img src="https://cdn.ticbeat.com/src/uploads/2017/08/las-mejores-ciudades-del-mundo-11.jpg" >
+                <figcaption>Fig.6 - Toronto (Canadá)</figcaption>
+            </figure>
+            <div class="elemento-texto">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </div>
+        </article>
+    </section>
+
     <footer></footer>
 </body>
 </html>

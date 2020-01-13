@@ -1,41 +1,75 @@
+html {
+	scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
 @media screen and (max-width:640px) {
-    /* reglas CSS */
-    .video{
-        width: 100%;
-    }
     #sonido{
         display: none;
     }
+    section{
+        width: 95%;
+    }
+    .elemento{
+        width: 100%;
+    }
+    #textoLogo{
+        padding: 0.5em;
+        max-width: 250px; 
+        font-size: 2em;
+    }
 }
-@media screen and (max-width:1024px) and (min-width:640px) {
-    /* reglas CSS */
-    .video{
-        width: 80%;
+@media screen and (max-width:1024px) and (min-width:640px){
+    section{
+        width: 95%;
+    }
+    .elemento{
+        width: 49%;
+    }
+    #textoLogo{
+        padding: 0.3em;
+        max-width: 400px; 
+        font-size: 3em;
     }
 }
 @media screen and (min-width:1024px) {
-/* reglas CSS */
-    .video{
-        width: 50%;
+    section{
+        max-width: 1000px;
+    }
+    .elemento{
+        width: 33%;
+    }
+    #textoLogo{
+        padding-top: 0.5em;
+        max-width: 800px; 
+        font-size: 3.5em;
     }
 }
 
-.video{
-    margin: auto;
+h1{
+    width: 100%;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    color: rgba(0, 0, 0, 0.95);
 }
 
-.titulo{
+section{
     margin: auto;
-    text-align: center;
+    margin-top: 15px;
 }
 
 body{
-        font-family: Arial, Helvetica, sans-serif;
+    font-family:Courier New,Open Sans,serif;
+    background-color: lightslategray;
+    color:#dcdcaa;
 }
 
-header h1{
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 .video_controls{
     background-color: rgba(100, 100, 100, 0.5);
@@ -49,6 +83,16 @@ button{
     cursor: pointer;
 }
 
+.button{
+    padding: 10px 0px 10px 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px;
+    background-color: rgba(244, 128, 29, 0.5);
+    cursor: pointer;
+
+}
+
 progress{
     width: 100%;
     height: 0.5em;
@@ -58,9 +102,165 @@ progress{
     cursor: pointer;
 }
 
-
 progress::-moz-progress-bar { background: rgba(244, 128, 29, 0.5); }
 progress::-webkit-progress-value { background: rgba(244, 128, 29, 0.5); }
+
+input{
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    margin-top: 10px;
+    border: 1px;
+}
+
+textarea{
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    margin-top: 10px;
+    border: 1px;
+}
+
+/*
+/ flexbox container 
+*/
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*
+/ flexbox items
+*/
+.elemento{
+    background-color: rgba(244, 128, 29, 0.5);
+    border-top: sandybrown;
+    border-width: 1em;
+    margin-bottom: 2em;
+    border-radius: 1em;
+}
+
+.elemento-texto{
+    width: auto;
+    padding: 10px;
+}
+
+figure{
+    margin: 0;
+    width: auto;
+    
+}
+
+figcaption{
+    padding: 10px;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1em 1em 0em 0em;
+}
+
+#textoLogo{
+    position: absolute; 
+    animation-name: textoAnimado;
+    animation-delay: 4s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    color: #778899;
+}
+
+@keyframes textoAnimado{
+    from{
+        color: #778899;
+    }
+    to{
+        color: #000;
+    }
+}
+
+#logoContainer{
+    width: 100%;
+    animation: logoAnimadoContainer 5s;
+    transform: translateX(100%);
+}
+
+#logo{
+    width: 150px;
+    animation: logoAnimado 5s;
+    transform: translateX(-100%);
+}
+
+@keyframes logoAnimado{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes logoAnimadoContainer{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+
+* {
+	margin:0;
+	padding:0;
+}
+
+a {
+    transition: 0.25s;
+}
+
+header {
+	max-width:1000px;
+	width:100%;
+	margin: auto;
+	overflow: hidden;
+	animation: headerAnimation 1s;
+	animation-delay: 7s;
+}
+
+header nav {
+	max-width:1000px;
+	margin:auto;
+	background:rgba(244, 128, 29, 0.5);
+}
+
+.menu_bar {
+	display:none;
+}
+
+
+.menu-simple ul li a {
+	display: block;
+	color:#fff;
+	padding:20px;
+	text-decoration:none;
+}
+
+
+.menu-simple ul li a:hover {
+	background:#000;
+}
+
+.menu-simple ul{
+	list-style-type:none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.menu-simple li{
+	flex: 1 0 auto;
+	text-align: center;
+}
 
 @font-face {
     font-family: 'icomoon';

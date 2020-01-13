@@ -36,10 +36,10 @@ video.addEventListener('play',()=>{
 video.addEventListener('volumechange',()=>{
     if(video.volume==0){
         mute.innerHTML='<span class="icon-volume-mute2"></span>';
-        sonido.innerHTML='OFF';
+        sonido.innerHTML=' Sonido OFF';
     }else{
         mute.innerHTML='<span class="icon-volume-medium"></span>'
-        sonido.innerHTML='ON';
+        sonido.innerHTML=' Sonido ON';
     }
 })
 
@@ -80,11 +80,11 @@ mute.addEventListener('click',()=>{
     if(video.volume==0){
         video.volume=1;
         mute.innerHTML='<span class="icon-volume-medium"></span>'
-        sonido.innerHTML='ON';
+        sonido.innerHTML=' Sonido ON';
     }else{
         video.volume=0;
         mute.innerHTML='<span class="icon-volume-mute2"></span>';
-        sonido.innerHTML='OFF';
+        sonido.innerHTML=' Sonido OFF';
     }
 })
 
@@ -113,5 +113,28 @@ function actualizarIndicadoresTiempo(){
     segundos = (segundos<10)?"0"+segundos:segundos;
     tiempo.innerHTML= minutos +":"+ segundos;
     progressBar.setAttribute('value', Math.trunc((video.currentTime/video.duration)*100) );	 
-   }
+}
 
+
+//validación de fomulario 
+window.addEventListener("load", function() {
+
+
+    var nombreInput=document.querySelector('#nombre');
+    var btnSubmit=document.querySelector('#btnSubmit');
+
+
+    btnSubmit.addEventListener("click", function(){
+        
+        console.log(nombreInput.value.length);
+        if(nombreInput.value.length < 2){
+            nombreInput.setCustomValidity('Por favor ingresa tu nombre!');
+        }else{
+            nombreInput.setCustomValidity('');
+        }
+    });
+
+    var emailInput=document.querySelector('#casilla');
+    //emailInput.setCustomValidity('Por favor ingresa tu casilla de correo!');
+
+});
